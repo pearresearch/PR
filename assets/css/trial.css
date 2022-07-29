@@ -1,0 +1,28 @@
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+.cta-main-desktop{
+  background-color: #66BFBF;
+  text-align: center;
+  padding: 2.5rem 0 ;
+}
+
+.cta-main-mobile{
+  background-color: #66BFBF;
+  text-align: center;
+  padding: 2.5rem 0 ;
+}
+
+.trial-cta{
+  padding: 2.5rem 15%;
+  color: #fff;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 3.5rem;
+}
+
+
+@media (max-width:991px) {
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+}
