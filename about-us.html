@@ -8,7 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
     <title>About Us</title>
 
@@ -49,7 +52,11 @@
                         <a href="javascript:void(0)">Pages</a>
                         <ul class="sub-menu">
                             <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="whatsapp.html">Functioning</a></li>
+
+                            <!-- ID's are used to define visibility in of either desktop or mobile, but not both -->
+                            <li id="nav-for-desktop"><a href="whatsapp.html">Functioning</a></li>
+                            <li id="nav-for-mobile"><a href="assets/dist/index.html">Functioning</a></li>
+                            
                             <li><a href="contact-us.html">Contact Us</a></li>
                             <!-- <li><a href="donation.html">Donate</a></li> -->
                         </ul>

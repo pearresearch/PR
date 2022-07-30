@@ -637,6 +637,10 @@ header
   .header-area.header-sticky .nav {
     margin-top: 100px !important;
   }
+.header-area.header-sticky.background-header .nav {
+margin-top: 80px !important;
+}
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -1121,6 +1125,9 @@ section.testimonials:after {
   color: red;
 }
 
+/* .form-index{
+  margin-left: 20px;
+} */
 
 /* Trial section */
 /* form trial */
@@ -2053,6 +2060,9 @@ body {
     float: none;
   }
 
+  /* .form-index{
+    margin-left: 0px;
+  } */
 
   section.get-info .left-image {
     margin-right: 0px;
@@ -2099,7 +2109,7 @@ body {
   }
 
 #page-heading-thankyou{
-  
+  text-align: left;
   font-size: 30px;
 }
 
