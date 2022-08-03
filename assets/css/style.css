@@ -1468,7 +1468,7 @@ section. ul.donation li a:hover {
 p.copyright {
   text-align: center;
   color: #7a7a7a;
-  margin: 40px 0px;
+  margin: 40px 0 0;
 }
 
 p.copyright a {
@@ -1898,6 +1898,32 @@ section.more-info ul li {
   font-style: italic;
   margin-bottom: 20px;
 }
+
+/* Tnc page */
+section.tnc-info p {
+  margin-bottom: 40px;
+}
+
+section.tnc-info ul li {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+/* Tnc on other pages */
+p.tnc{
+  margin-bottom: 40px;
+  text-align: center;
+  color: #7a7a7a;
+
+}
+a.tnc{
+  color: #7a7a7a;
+  padding: 0 10px 0
+
+}
+
+
 
 section.more-info ul li:last-child {
   margin-bottom: 0px;
