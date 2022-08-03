@@ -1923,6 +1923,10 @@ a.tnc{
 
 }
 
+.tnc a:hover{
+  text-decoration: underline !important;
+}
+
 
 
 section.more-info ul li:last-child {
