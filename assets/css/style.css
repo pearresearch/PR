@@ -256,7 +256,39 @@ section {
   margin-top: 30px;
 }
 
+/* Publications
+ */
 
+.publication-main-div{
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 5%);
+  position: relative;
+z-index: 5;
+background-color: #fff;
+margin-top: 40px;
+box-shadow: 0px 0px 15px rgb(0 0 0 / 5%);
+border-radius: 15px;
+padding: 40px;
+}
+
+.publication-contact {
+  margin-top: -50px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.publication-contact h6 {
+  font-size: 1rem;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.publication-contact a {
+  text-decoration: none;
+}
+
+.publication-contact a:hover {
+  color: #66bfbf;
+  transition: all 0.3s ease 0s;
+}
 /*
 ---------------------------------------------
 header
@@ -1028,7 +1060,8 @@ section.simple-cta p {
   margin-bottom: 40px;
 }
 
-
+/* Useful colours
+6d6e71 */
 /*
 ---------------------------------------------
 testimonials
@@ -1157,12 +1190,14 @@ section.testimonials:after {
 }
 
 #close:hover {
-    color: #1a1a1a;
+    color: #66bfbf;
 
 }
 
 
-/* Form slow */
+/* Form slow ends */
+
+
 
 
 /* .form-index{
@@ -1242,14 +1277,20 @@ section.testimonials:after {
 
 /* Also search for media tag from above */
 
+
+
+
+
+
 /*
 ---------------------------------------------
 contact us
 ---------------------------------------------
 */
 
+
 section.contact-us {
-  /* background-image: url(../images/footer-bg.png); */
+  /* background-image: url(../images/dots.png); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
