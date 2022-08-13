@@ -657,9 +657,10 @@ Medical College required field
 -->
 
           <div class="col-lg-12 form-index">
-          <div class="col-lg-8">
+            <!-- Will need to display flex the above to fit two div's side by side -->
+          <div class="col-lg-8" style="margin:auto;">
 
-            <form id="contact" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"  style="margin-left:0px;">
+            <form id="contact" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off" style="margin-left:0px;">
 
 
               <div class="row">
@@ -780,7 +781,7 @@ Medical College required field
               </div>
             </form>
 
-            <h3 id="success-msg" class="alert alert-success" style="text-align: center !important; display:none; color:#4a4a4a">We have received your application. You could <a href="contact-us.html" style="text-decoration:none !important;"><u>contact&nbsp;us</u></a> if you have any further questions.</h3>
+            <div id="success-msg" class="alert alert-success" style="text-align: center !important; display:none;">We have received your application. Thank you for applying with us. You could <a href="contact-us.html" class="alert-link">contact&nbsp;us&nbsp;here</a> if you have any further questions.   </div>
 
             <script>
             function postToGoogle() {
@@ -835,7 +836,7 @@ Medical College required field
 
 
           </div>
-          
+
           </div>
 
       <div class="col-lg-12">
