@@ -38,9 +38,8 @@
     <div class="callout-header">Hello there researcher!</div>
     <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
     <div class="callout-container">
-      <p style="color:#fff;">We have received many applications and will attend each one of them. Please be patient, we will contact you at the earliest. <u><a href="contact-us.html" style="text-decoration: underline;">Contact Us</a></u> for any further
+      <p style="color:#fff;">We have received many applications and will attend each one of them. We appreciate your patience, we will contact you at the earliest. <u><a href="contact-us.html" style="text-decoration: underline;">Contact Us</a></u> for any further
         information.</p>
-        <p style="color:#fff;">Please check promotion(90% times) or spam(10% times) of your inbox to avoid missing our mails.</p>
     </div>
   </div> -->
 
@@ -660,8 +659,9 @@ Medical College required field
           <div class="col-lg-12 form-index">
           <div class="col-lg-8">
 
-            <form id="contact" action="" name="googlesheet" method="post" style="margin-left:0px;">
+            <form id="contact" target="_self" onsubmit="return postToGoogle();" action=""  style="margin-left:0px;">
 
+<!-- autocomplete="off" -->
               <div class="row">
 
                 <div class="col-lg-12">
@@ -673,32 +673,32 @@ Medical College required field
                 <div class="col-lg-6" style="position:relative;">
                       <fieldset>
                         <p class="required-form">*</p>
-                        <input type="name" name="name" id="name" placeholder="Full Name" autocomplete="on" required />
+                        <input type="name" name="entry.1423643009" id="name" placeholder="Full Name" autocomplete="on" required />
                       </fieldset>
                     </div>
                     <div class="col-lg-6" style="position:relative;">
                       <p class="required-form">*</p>
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email"  required/>
+                        <input type="text" name="entry.849026994" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email"  required/>
                       </fieldset>
                     </div>
                     <div class="col-lg-6" style="position:relative;">
                       <p class="required-form">*</p>
                       <fieldset>
-                        <input type="text" name="whatsappno" id="whatsappno" placeholder="Whatsapp number (including country code)"  required/>
+                        <input type="text" name="entry.1011570272" id="whatsappno" placeholder="Whatsapp number (including country code)"  required/>
                       </fieldset>
                     </div>
                     <div class="col-lg-6" style="position:relative;">
                       <p class="required-form">*</p>
                       <fieldset>
-                        <input type="text" name="medicalcollege" id="medicalcollege" placeholder="Medical College" required />
+                        <input type="text" name="entry.1665202097" id="medicalcollege" placeholder="Medical College" required />
                       </fieldset>
                     </div>
 
                     <div class="col-lg-6" style="position:relative;">
                       <p class="required-form">*</p>
                       <fieldset>
-                        <select name="careerstage" id="careerstage" required>
+                        <select name="entry.1357177141" id="careerstage" required>
                           <option value="">Stage in your career</option>
                           <!-- <option value="Undergrad">Undergrad</option> -->
                           <option value="Undergraduate studies">Undergraduate studies</option>
@@ -711,7 +711,7 @@ Medical College required field
                     <div class="col-lg-6" style="position:relative;">
                       <p class="required-form">*</p>
                             <fieldset>
-                              <select name="priorexp" id="priorexp" required>
+                              <select name="entry.892534118" id="priorexp" required>
                                 <option value="">Prior Experience</option>
                                 <option value="None">None</option>
                                 <option value="1-3">1-3</option>
@@ -721,7 +721,7 @@ Medical College required field
                           </div>
               <div class="col-lg-6">
                       <fieldset>
-                        <select name="groupapply" id="groupapply">
+                        <select name="entry.1898198717" id="groupapply">
                           <option value="">Apply as a group</option>
                           <option value="Yes">Yes</option>
                           <option value="No">No</option>
@@ -735,7 +735,7 @@ Medical College required field
                     </div> -->
                     <div class="col-lg-6">
                       <fieldset>
-                        <select name="otherresearch" id="otherresearch">
+                        <select name="entry.1483419619" id="otherresearch">
                           <option value="">Interested in research other than original studies?</option>
                           <option value="Yes">Yes</option>
                           <option value="No">No</option>
@@ -744,7 +744,7 @@ Medical College required field
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea name="message" id="message" placeholder="Any questions with your submission?"></textarea>
+                        <textarea name="entry.57394291" id="message" placeholder="Any questions with your submission? If applying as a group, also share the number of members in your team."></textarea>
                       </fieldset>
                     </div>
                     <!-- <div class="col-lg-12">
@@ -752,7 +752,7 @@ Medical College required field
                         <h6 style="padding-bottom:5px;">Processing often takes 5-30 seconds.</h6>
                       </fieldset>
                     </div> -->
-                    <div class="col-lg-12">
+                    <!-- <div class="col-lg-12">
                       <fieldset>
                         <a class="fragment" href="#contact-section">
                             <div>
@@ -761,15 +761,15 @@ Medical College required field
                         Processing often takes 5-10 seconds. We appreciate your patience. </p>
                         </div>
                         </a>                      </fieldset>
-                    </div>
+                    </div> -->
 
 
 
               <!-- Trial of popup of slow -->
 <!-- Trial ends -->
-                    <div id="form_alert" style="text-align:center;">
+                    <!-- <div id="form_alert" style="text-align:center;">
 
-                    </div>
+                    </div> -->
 
                 <div class="col-lg-12">
                   <fieldset>
@@ -779,7 +779,63 @@ Medical College required field
                 </div>
               </div>
             </form>
+
+            <h3 id="success-msg" class="alert alert-success" style="text-align: center !important; display:none; color:#4a4a4a">We have received your application. You could <a href="contact-us.html" style="text-decoration:none !important;"><u>contact&nbsp;us</u></a> if you have any further questions.</h3>
+
+            <script>
+            function postToGoogle() {
+                            var field1 = $("#name").val();
+                            var field2 = $("#email").val();
+                            var field3 = $("#whatsappno").val();
+                            var field4 = $("#medicalcollege").val();
+                            var field5 = $("#careerstage option:selected").text();
+                            var field6 = $("#priorexp option:selected").text();
+                            var field7 = $("#groupapply option:selected").text();
+                            var field8 = $("#otherresearch option:selected").text();
+                            var field9 = $("#message").val();
+
+            				// if(field1 == ""){
+            				// 	alert('Please Fill Your Name');
+            				// 	document.getElementById("name").focus();
+            				// 	return false;
+            				// }
+            				// if(field2 == ""){
+            				// 	alert('Please Fill Your Email');
+            				// 	document.getElementById("email").focus();
+            				// 	return false;
+            				// }
+            				// if(field3 == "" || field3.length > 10 || field3.length < 10){
+            				// 	alert('Please Fill Your Mobile Number');
+            				// 	document.getElementById("whatsappno").focus();
+            				// 	return false;
+            				// }
+
+
+
+
+                            $.ajax({
+                                url: "https://docs.google.com/forms/d/e/1FAIpQLSdWKKWwIuXjucVjwDadcucXYhEiqPqlR6dBbh9BeQEiYyhIrg/formResponse?",
+            					data: {"entry.1423643009": field1, "entry.849026994": field2, "entry.1011570272": field3, "entry.1665202097": field4, "entry.1357177141": field5, "entry.892534118": field6, "entry.1898198717": field7, "entry.1483419619": field8, "entry.57394291": field9},
+                                type: "POST",
+                                dataType: "xml",
+                                success: function(d)
+            					{
+            					},
+            					error: function(x, y, z)
+            						{
+
+            							$('#success-msg').show();
+            							$('#contact').hide();
+
+            						}
+                            });
+            				return false;
+                        }
+            </script>
+
+
           </div>
+          
           </div>
 
       <div class="col-lg-12">
@@ -871,7 +927,7 @@ Medical College required field
 
 
 
-  <script>
+  <!-- <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyjGvYe6OZJ6hfgOnUQT_-do3iKmoukED0TG8zLnr3XFIjldsjINsVAo48OFr-OAxTE/exec'
     const form = document.forms['googlesheet']
 
@@ -881,7 +937,7 @@ Medical College required field
         .then(response => $("#form_alert").html("<div class='alert alert-success'> We have received your application. You could <a href='contact-us.html'><u>contact&nbsp;us</u></a> if you have any further questions. </div>"))
         .catch(error => $("#form_alert").html("<div class='alert alert-danger'> Something didn't go well. Please contact us on info@pearresearch.com and we'll sort it for you.</div>"))
     })
-  </script>
+  </script> -->
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "54e629ee3fa549cb8bc6878c5cf96c82"}'></script><!-- End Cloudflare Web Analytics -->
 
