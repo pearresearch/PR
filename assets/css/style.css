@@ -256,6 +256,41 @@ section {
   margin-top: 30px;
 }
 
+/* Requirements */
+
+.for-flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.requirement-main-div{
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 5%);
+margin-top: 40px;
+box-shadow: 0px 0px 15px rgb(0 0 0 / 5%);
+border-radius: 15px;
+padding: 40px;
+}
+
+.requirement-contact {
+  margin-top: -50px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.requirement-contact h6 {
+  font-size: 1rem;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+/* .requirement-contact a {
+  text-decoration: none;
+}
+
+.requirement-contact a:hover {
+  color: #66bfbf;
+  transition: all 0.3s ease 0s;
+} */
+
 /* Publications
  */
 
