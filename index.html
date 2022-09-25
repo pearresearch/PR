@@ -1397,7 +1397,23 @@
 
             <form id="contact" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"
               style="margin-left:0px;">
+              <style>
+                ::placeholder {
+                  color: #777777;
+                  opacity: 1;
+                  /* Firefox */
+                }
 
+                :-ms-input-placeholder {
+                  /* Internet Explorer 10-11 */
+                  color: #777777;
+                }
+
+                ::-ms-input-placeholder {
+                  /* Microsoft Edge */
+                  color: #777777;
+                }
+              </style>
 
               <div class="row">
 
