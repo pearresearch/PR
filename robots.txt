@@ -6,5 +6,7 @@ Disallow: /donation.html
 Disallow: /whatsapp.html
 Disallow: /assets/dist/index.html
 Disallow: /assets/dist-editing-example/index.html
+Disallow: /thank-you.html
+Disallow: /feedback.html
 
 Sitemap: https://pearresearch.com/sitemap.xml
