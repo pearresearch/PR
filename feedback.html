@@ -127,18 +127,28 @@
                 </div>
 
 
-                <div class="col-lg-12" style="position:relative;">
+                <div class="col-lg-6" style="position:relative;">
                   <p class="required-form">*</p>
                   <fieldset>
-                    <input type="range" name="manuscriptsatisfaction" id="email" pattern="[^ @]*@[^ @]*"
-                      placeholder="Your Email" required="">
+                    <p style="padding-bottom: 2px;">How satisfied are you with the manuscript?</p>
+                    <input type="range" name="manuscriptsatisfaction" min="0" max="5" step="1" required=""
+                      style="padding-left:0; padding-right: 0; ">
                   </fieldset>
                 </div>
-                <div class="col-lg-12" style="position:relative;">
+                <div class="col-lg-6" style="position:relative;">
                   <p class="required-form">*</p>
                   <fieldset>
-                    <input type="range" name="mentorsatisfaction" id="email" pattern="[^ @]*@[^ @]*"
-                      placeholder="Your Email" required="">
+                    <p style="padding-bottom: 2px;">How satisfied are you with the mentors?</p>
+
+                    <input type="range" name="mentorsatisfaction" min="0" max="5" step="1" required=""
+                      style=" padding-left:0; padding-right: 0;">
+                    <datalist id="tickmarks">
+                      <option value="0"></option>
+                      <option value="25"></option>
+                      <option value="50"></option>
+                      <option value="75"></option>
+                      <option value="100"></option>
+                    </datalist>
                   </fieldset>
                 </div>
 
