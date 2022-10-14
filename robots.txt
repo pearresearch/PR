@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /privacy.html
+Disallow: /tnc.html
+Disallow: /thankyou.html
+Disallow: /donation.html
+Disallow: /whatsapp.html
+Disallow: /assets/dist/index.html
+Disallow: /assets/dist-editing-example/index.html
+
+Sitemap: https://pearresearch.com/sitemap.xml
