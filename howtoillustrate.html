@@ -101,7 +101,7 @@
   <style>
     .accordion {
       font-weight: bolder;
-      padding-bottom: 2rem;
+      /* padding-bottom: 2rem; */
       text-decoration: underline;
     }
   </style>
@@ -332,39 +332,39 @@
                 </div>
               </div>
 
-              <br>
+              <!-- <br>
               <div>
                 <h2 class=" accordion">Tips</h2>
 
                 <p style="margin-top:5px; margin-bottom: 5px!important;"">
                      - Use vector images, highly underrated. 
                     </p>
-                  </div>
-                </div>
-               
+                  </div> -->
+            </div>
 
-                <script>
-                  const accordionBtns = document.querySelectorAll(" .accordion"); accordionBtns.forEach((accordion) => {
-                    accordion.onclick = function () {
-                      this.classList.toggle("is-open");
 
-                      let content = this.nextElementSibling;
-                      console.log(content);
+            <script>
+              const accordionBtns = document.querySelectorAll(" .accordion"); accordionBtns.forEach((accordion) => {
+                accordion.onclick = function () {
+                  this.classList.toggle("is-open");
 
-                      if (content.style.maxHeight) {
-                        //this is if the accordion is open
-                        content.style.maxHeight = null;
-                      } else {
-                        //if the accordion is currently closed
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        console.log(content.style.maxHeight);
-                      }
-                    };
-                  });
-                </script>
-              </div>
+                  let content = this.nextElementSibling;
+                  console.log(content);
 
-              <!-- <a href="#">
+                  if (content.style.maxHeight) {
+                    //this is if the accordion is open
+                    content.style.maxHeight = null;
+                  } else {
+                    //if the accordion is currently closed
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    console.log(content.style.maxHeight);
+                  }
+                };
+              });
+            </script>
+          </div>
+
+          <!-- <a href="#">
                   <div class="requirement-main-div-part-top">
                     <h6 style="text-align:left;">Good research writing by Dr. Arsalan Moinuddin <span
                       style="float:right;">
@@ -381,14 +381,14 @@
                 <a href="#">
                   <div class="requirement-main-div-part"> Good research writing by Dr. Arsalan Moinuddin </div>
                 </a> -->
-            </div>
-            <!-- <div class="requirement-main-div col-lg-5">
+        </div>
+        <!-- <div class="requirement-main-div col-lg-5">
 
 
                   </div> -->
-          </div>
-        </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
   <section class="contact-us">
