@@ -845,6 +845,8 @@ banner
 .trial-header{
   height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .trial-header-sub1{
@@ -1797,8 +1799,8 @@ section.contact-us ul.donation li a {
   line-height: 44px;
 }
 
-section. ul .donation li a:hover {
-}
+/* section. ul .donation li a:hover {
+} */
 
 .donate-pear {
   align-items: center;
