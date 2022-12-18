@@ -842,12 +842,96 @@ banner
 ---------------------------------------------
 */
 
+.trial-header{
+  height: 100vh;
+  display: flex;
+}
+
+/* .trial-header-sub1{
+  width:100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.trial-header-sub2{
+  width:100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+h1, .text1, .text2, .text3 {
+  opacity: 0;
+
+}
+
+h1{
+  opacity: 1;
+}
+
+.text1, .text2, .text3 {
+  
+ margin-top: 10px;
+position: absolute;
+bottom: 0px;
+font-size: 64px;
+    color: #111111;
+    font-weight: 900;
+}
+
+.text1 {
+  animation: 12s slideDown 0s infinite;
+
+}
+
+.text2 {
+  animation: 12s slideDown 4s infinite;
+  
+}
+.text3 {
+  animation: 12s slideDown 8s infinite;
+  
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    bottom:40px;
+  }
+
+  5% {
+    opacity: 1;
+    bottom:0;
+  }
+   30% {
+    opacity: 1;
+    bottom:0px;
+  }
+   33.3333% {
+    opacity: 0;
+    bottom:-40px;
+  }
+}
+
 section.main-banner {
   margin-top: 0px;
 }
 
 .main-banner {
   padding-top: 130px;
+  /* position: absolute; */
+}
+
+.main-banner .header-text {
+  text-align: center;
+ width: 70%;
+ margin: auto;
 }
 
 .main-banner .right-image {
@@ -882,6 +966,22 @@ section.main-banner {
 }
 
 .main-banner .header-text h2 em {
+  /* font-style: normal; */
+  color: #66bfbf;
+}
+
+.main-banner .header-text h1 {
+  /* position: relative; */
+  z-index: 2;
+  margin-top: 20px;
+  font-size: 64px;
+  color: #111111;
+  font-weight: 900;
+  line-height: 74px;
+  margin-bottom: 80px;
+}
+
+.main-banner .header-text h1 em {
   /* font-style: normal; */
   color: #66bfbf;
 }
@@ -1629,6 +1729,7 @@ section.contact-us ul.social-icons li a:hover {
   bottom: 35px;
   right: 20px;
   margin-left: 20px;
+  width:250px;
   max-width: 300px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35) !important;
 }
@@ -1760,8 +1861,9 @@ p.copyright a {
 /* Illustration */
 
 /* .illustration-img{
-  padding: 0 5px 0;
-} */
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}  */
+
 /*
 ---------------------------------------------
 heading page
@@ -2329,6 +2431,17 @@ body {
     font-size: 40px;
     line-height: 50px;
   }
+  .main-banner .header-text h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 40px;
+    padding:5px;
+  }
+
+  .text1, .text2, .text3 {
+    font-size: 34px;
+    font-weight: bold;
+  }  
   /* .header-area {
     background: rgb(176,225,225) !important;
     background: linear-gradient(-145deg, rgba(176,225,225,1) 0%, rgba(246,191,159,1) 100%) !important;
