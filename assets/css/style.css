@@ -976,17 +976,32 @@ section.main-banner {
 }
 */
 
+@media (min-width: 992px) {
+  .main-banner .header-text-img::after {
+    position: absolute;
+    background-image: url(../images/banner-left-dec.png);
+    width: 214px;
+    height: 429px; 
+    content: '';
+    left: 0;
+    bottom: -240px;
+    z-index: 1;
+  } 
+  }
 
-.main-banner .header-text-img::after {
-  position: absolute;
-  background-image: url(../images/banner-left-dec.png);
-  width: 214px;
-  height: 429px;
-  content: '';
-  left: 0;
-  bottom: -240px;
-  z-index: 1;
-} 
+
+@media (max-width: 992px) {
+  .main-banner .header-text-img::after {
+    position: absolute;
+    background-image: url(../images/banner-left-dec-sm.png);
+    width: 108px;
+    height: 215px; 
+    content: '';
+    left: 0;
+    bottom: -30px;
+    z-index: 1;
+  } 
+  }
 
 
 
