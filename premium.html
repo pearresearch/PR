@@ -1798,21 +1798,16 @@
                     </select>
                   </fieldset>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="position:relative;">
+                  <p class="required-form">*</p>
                   <fieldset>
-                    <select name="entry.1797785322" id="otherresearch">
+                    <select name="entry.1797785322" id="otherresearch" required>
                       <option value="">Which kind of research type are you interested in learning?</option>
                       <option value="Systematic Review">Systematic Review</option>
                       <option value="Literature Review">Literature Review</option>
                       <option value="Original Study">Original Study</option>
-                      <option value="Case Report">Case Report (only if available)</option>
-
+                      <option value="Case Report">Case Report</option>
                     </select>
-
-
-
-
-
                   </fieldset>
                 </div>
 
@@ -1830,6 +1825,13 @@
                   <fieldset>
                     <textarea name="entry.161752799" id="message"
                       placeholder="Which topics are you interested in? Do you have any specific research questions prepared?"></textarea>
+                  </fieldset>
+                </div>
+
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="name" name="entry.559511339" id="transaction"
+                      placeholder="Application Fee Transaction ID">
                   </fieldset>
                 </div>
                 <!-- <div class="col-lg-12">
@@ -1859,9 +1861,9 @@
 
                 <div class="control-group" id="control-grp-tnc">
                   <label class="control control-checkbox">
-                    I am fluent in the English language.
+                    I have paid the Application Fee of ₹500.
                     <input type="checkbox" required
-                      oninvalid="this.setCustomValidity('You need to acknowledge your English language proficiency')"
+                      oninvalid="this.setCustomValidity('You need to pay the Application Fee to proceed')"
                       oninput="this.setCustomValidity('')" />
                     <div class="control_indicator"></div>
                   </label>
@@ -1871,10 +1873,10 @@
                   <label class="control control-checkbox">
                     I agree to the <a href="tnc.html" style="color:#66bfbf;" target="_blank"><strong>Terms and
                         Conditions</strong></a> and <a href="requirements-premium.html" style="color:#66bfbf;"
-                      target="_blank"><strong>Requirements</strong></a>. I agree to pay the required fee before
-                    joining.
+                      target="_blank"><strong>Requirements</strong></a>. I agree to pay the 'Remaining fee' before
+                    joining my respective group.
                     <input type="checkbox" required
-                      oninvalid="this.setCustomValidity('You need to accept the Terms and Conditions')"
+                      oninvalid="this.setCustomValidity('You need to accept the Terms and Conditions and Requirements')"
                       oninput="this.setCustomValidity('')" />
                     <div class="control_indicator"></div>
                   </label>
@@ -1911,6 +1913,7 @@
                 var field8 = $("#otherresearch option:selected").text();
                 var field9 = $("#group-name-main").val();
                 var field10 = $("#message").val();
+                var field11 = $("#transaction").val();
 
                 // if(field1 == ""){
                 // 	alert('Please Fill Your Name');
@@ -1933,7 +1936,7 @@
 
                 $.ajax({
                   url: "https://docs.google.com/forms/d/e/1FAIpQLSdkXFtI_FJrWOy7AdjXS2MOso5rUCF1LKzlhjdod-xTACYMiQ/formResponse?",
-                  data: { "entry.123420402": field1, "entry.1180033004": field2, "entry.1633213978": field3, "entry.1651405704": field4, "entry.790573037": field5, "entry.218919386": field6, "entry.2019531057": field7, "entry.1797785322": field8, "entry.853308835": field9, "entry.161752799": field10 },
+                  data: { "entry.123420402": field1, "entry.1180033004": field2, "entry.1633213978": field3, "entry.1651405704": field4, "entry.790573037": field5, "entry.218919386": field6, "entry.2019531057": field7, "entry.1797785322": field8, "entry.853308835": field9, "entry.161752799": field10, "entry.559511339": field11 },
                   type: "POST",
                   dataType: "xml",
                   success: function (d) {
