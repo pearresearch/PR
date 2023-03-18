@@ -100,6 +100,15 @@
       text-decoration: underline !important;
       color: #212529 !important;
     }
+
+    .payment-a {
+      font-weight: bold;
+    }
+
+    .payment-a:hover {
+      text-decoration: underline !important;
+
+    }
   </style>
 
   <section class="tnc-info">
@@ -118,8 +127,17 @@
 
 
             <div class="requirement-main-div  col-lg-5">
-              <h6 style="text-decoration: underline;">UPI Payment Option</h6> <br>
-              <h6 style="margin-bottom: 5px;">Application fee: ₹500</h6>
+              <h6>
+                • Kindly read and agree with the <a class="payment-a" href="requirements-premium.html" target="_blank"
+                  style="color:#212529;">Requirements</a> and <a class="payment-a" href="tnc.html" target="_blank"
+                  style="color:#212529;">Terms
+                  and Conditions</a>
+                before
+                proceeding with any payment.</h6> <br>
+              <h4 style="text-decoration: underline;">UPI Payment Option</h4> <br>
+              <h6 style="margin-bottom: 5px;">Application fee: ₹500 (This is NOT the <a class="payment-a"
+                  href="#payment-info" style="color:#212529;">Total
+                  fee</a>)</h6>
               <h6 style="color: red;">Note: Kindly enter your name (applicant's name) in the note during payment AND
                 take a screenshot of the payment page. It will be required later.</h6>
               <br>
@@ -276,7 +294,7 @@
                 }
               </style>
               <div>
-                <button class="accordion">More info</button>
+                <button class="accordion" id="payment-info">Total Fee</button>
                 <div class="accordion-content">
                   <br>
 
