@@ -998,7 +998,7 @@ section.main-banner {
     height: 215px; 
     content: '';
     left: 0;
-    bottom: -80px;
+    bottom: -50px;
     z-index: 1;
   } 
   }
@@ -1815,7 +1815,7 @@ section.contact-us ul.social-icons li a:hover {
 
 .closebtn {
   position: absolute;
-  top: 5px;
+  top: 9.5px;
   right: 15px;
   color: white;
   font-size: 30px;
@@ -1827,7 +1827,7 @@ section.contact-us ul.social-icons li a:hover {
 }
 
 .callout a {
-  color: white;
+  color: #212529 !important;
 }
 
 /* Callout box ends */
