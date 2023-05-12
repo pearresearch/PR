@@ -372,7 +372,8 @@
           </div>
           <script src="script.js"></script>
 
-          <script>
+          <!-- One accordion at once  -->
+          <!-- <script>
             const items = document.querySelectorAll('.accordion button');
             function toggleAccordion() {
               const itemToggle = this.getAttribute('aria-expanded');
@@ -384,7 +385,23 @@
               }
             }
             items.forEach((item) => item.addEventListener('click', toggleAccordion));
+          </script> -->
+          <!-- Mutliple accordions at once  -->
+          <script>
+            const items = document.querySelectorAll('.accordion button');
+
+            function toggleAccordion() {
+              const itemToggle = this.getAttribute('aria-expanded');
+              if (itemToggle === 'true') {
+                this.setAttribute('aria-expanded', 'false');
+              } else {
+                this.setAttribute('aria-expanded', 'true');
+              }
+            }
+
+            items.forEach((item) => item.addEventListener('click', toggleAccordion));
           </script>
+
 
         </div>
 
