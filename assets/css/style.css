@@ -1333,25 +1333,25 @@ section.testimonials {
 }
 
 section.testimonials:before {
-  position: absolute;
+  /* position: absolute;
   content: "";
-  /* background-image: url(../images/testimonials-left-dec.png); */
+  background-image: url(../images/testimonials-left-dec.png);
   left: 0px;
   top: -140px;
   width: 593px;
   height: 352px;
-  z-index: 1;
+  z-index: 1; */
 }
 
 section.testimonials:after {
-  position: absolute;
+  /* position: absolute;
   content: "";
-  /* background-image: url(../images/testimonials-right-dec.png); */
+  background-image: url(../images/testimonials-right-dec.png); 
   right: 0px;
   bottom: -140px;
   width: 632px;
   height: 352px;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .testimonials .item {
@@ -1391,7 +1391,7 @@ section.testimonials:after {
   z-index: 2;
   position: absolute;
   right: 30px;
-  bottom: 30px;
+  bottom: 32px;
 }
 
 .testimonials .owl-dots {
@@ -1815,7 +1815,7 @@ section.contact-us ul.social-icons li a:hover {
 
 .closebtn {
   position: absolute;
-  top: 9.5px;
+  top: 10.5px;
   right: 15px;
   color: white;
   font-size: 30px;
@@ -1823,7 +1823,7 @@ section.contact-us ul.social-icons li a:hover {
 }
 
 .closebtn:hover {
-  color: #1a1a1a;
+  color: #4a4a4a;
 }
 
 .callout a {
