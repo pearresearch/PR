@@ -20,7 +20,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -103,6 +106,10 @@
   </style>
 
   <section class="tnc-info">
+
+
+
+
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -121,8 +128,22 @@
 
 
           <div class="requirement-main-div  col-lg-11" style="margin:40px auto 0;">
+            <div class="border-bottom border-top" style="padding-top: 5%; padding-bottom: 5%;">
+              <h4 style="padding-bottom: 10px;">Index</h4>
 
-            <h4 style="text-decoration: underline;">General</h4>
+              <p style="margin-bottom:0px;"><a href="#general-req"><span>General</span></a></p>
+
+
+              <p style="margin-bottom:0px;"><a href="#authorship-req"><span>Authorship</span></a></p>
+
+
+              <p style="margin-bottom:0px;"> <a href="#pricing"><span>Pricing</span></a></p>
+
+
+              <p style="margin-bottom:0px;"><a href="#group-req"><span>Group Applications</span></a></p>
+            </div>
+            <br><br>
+            <h4 style="text-decoration: underline;" id="general-req">General</h4>
             <br>
             <h6><i class="fa fa-check" aria-hidden="true"></i> The duration of each project will begin once the topic
               is decided. Our goal is to have the manuscript finalized (including reviewing by all members) within one
@@ -195,7 +216,7 @@
               language.</h6>
             <br>
 
-            <h4 style="text-decoration: underline;">Authorship</h4>
+            <h4 style="text-decoration: underline;" id="authorship-req">Authorship</h4>
             <br>
             <h6><i class="fa fa-check" aria-hidden="true"></i> The authorship order shall be decided objectively in each
               paper based on contribution and engagement. The more you contribute,
@@ -255,7 +276,7 @@
         </h6>
         <br>
         <h6><i class="fa fa-check" aria-hidden="true"></i>
-          The Application Fee is ₹500 irrespective of the study type you apply for.
+          The Application Fee is ₹500 or $10 (USD) irrespective of the study type you apply for.
         </h6>
         <br>
 
@@ -265,58 +286,158 @@
         <br>
 
 
+        <!-- Tabs  -->
 
-        <table class="table table-striped table-sm table-req-premium" style="align-items: center;">
-          <thead class="table-dark align-middle t-head-center">
-            <tr>
-              <th scope="col" style="width: 50%">Facet</th>
-              <th scope="col" class="center-cell" style="width: 25%" colspan="2">Total Fee</th>
+        <style>
+          .nav-tabs {
+            max-width: 70%;
+          }
 
-            </tr>
-          </thead>
-          <tbody class="align-middle t-body-cell-center">
-            <!-- <tr>
-              <th scope="row">Access to PearResearch Cureus Channel </th>
-              <td><i class="fa fa-times" aria-hidden="true"></i></td>
-              <td><i class="fa fa-check" aria-hidden="true"></i></td>
+          .nav-link {
+            color: #212529;
+          }
 
-            </tr> -->
+          .nav-link:hover {
+            color: #212529;
+          }
+        </style>
 
-            <tr>
-              <th scope="row">Case&nbsp;Report / Correspondence / Letter&nbsp;to&nbsp;Editor </th>
-              <td>₹2000 ($25)</td>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+              type="button" role="tab" aria-controls="nav-home" aria-selected="true" style="font-weight: bolder;">INR(₹)
+            </button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+              type="button" role="tab" aria-controls="nav-profile" aria-selected="false"
+              style="font-weight: bolder;">USD($)</button>
 
-            </tr>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <table class="table table-striped table-sm table-req-premium" style="align-items: center;">
+              <thead class="table-dark align-middle t-head-center">
+                <tr>
+                  <th scope="col" style="width: 50%">Facet</th>
+                  <th scope="col" class="center-cell" style="width: 25%" colspan="2">Total Fee</th>
+
+                </tr>
+              </thead>
+              <tbody class="align-middle t-body-cell-center">
+                <!-- <tr>
+                  <th scope="row">Access to PearResearch Cureus Channel </th>
+                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+    
+                </tr> -->
+
+                <tr>
+                  <th scope="row">Case&nbsp;Report / Correspondence / Letter&nbsp;to&nbsp;Editor </th>
+                  <td>₹2000</td>
+
+                </tr>
 
 
-            <tr>
-              <th scope="row">Literature Review / Case Series</th>
-              <td>₹5000 ($60)</td>
+                <tr>
+                  <th scope="row">Literature Review / Case Series</th>
+                  <td>₹5000</td>
 
-            </tr>
-            <tr>
-              <th scope="row">Observational Study </th>
-              <td>₹7000 ($90)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Observational Study </th>
+                  <td>₹7000</td>
 
-            </tr>
-            <tr>
-              <th scope="row">Systematic Review (coming soon)</th>
-              <td>₹10000 ($125)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Systematic Review (coming soon)</th>
+                  <td>₹10000</td>
 
-            </tr>
-
-
+                </tr>
 
 
-          </tbody>
-          <caption style="color:#212529;">• Note that this fee is not including any fee the journal may charge during
-            publication and that will be discussed based on authorship order. <br>
-            • The listed fee is inclusive of Application Fee and will be deducted finally. <br>
-            • Feel free to mail us at <a href="mailto:info@pearresearch.com"
-              style="color:#212529; text-decoration: underline!important;">info@pearresearch.com</a> for any other
-            study designs.
-          </caption>
-        </table>
+
+
+              </tbody>
+              <caption style="color:#212529;">• Note that this fee is not including any fee the journal may charge
+                during
+                publication and that will be discussed based on authorship order. <br>
+                • The listed fee is inclusive of Application Fee and will be deducted finally. <br>
+                • Feel free to mail us at <a href="mailto:info@pearresearch.com"
+                  style="color:#212529; text-decoration: underline!important;">info@pearresearch.com</a> for any other
+                study designs.
+              </caption>
+            </table>
+
+
+
+          </div>
+
+
+
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+            <table class="table table-striped table-sm table-req-premium" style="align-items: center;">
+              <thead class="table-dark align-middle t-head-center">
+                <tr>
+                  <th scope="col" style="width: 50%">Facet</th>
+                  <th scope="col" class="center-cell" style="width: 25%" colspan="2">Total Fee</th>
+
+                </tr>
+              </thead>
+              <tbody class="align-middle t-body-cell-center">
+                <!-- <tr>
+                  <th scope="row">Access to PearResearch Cureus Channel </th>
+                  <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                  <td><i class="fa fa-check" aria-hidden="true"></i></td>
+    
+                </tr> -->
+
+                <tr>
+                  <th scope="row">Case&nbsp;Report / Correspondence / Letter&nbsp;to&nbsp;Editor </th>
+                  <td>USD 25</td>
+
+                </tr>
+
+
+                <tr>
+                  <th scope="row">Literature Review / Case Series</th>
+                  <td>USD 60</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">Observational Study </th>
+                  <td>USD 90</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">Systematic Review (coming soon)</th>
+                  <td>USD 125</td>
+
+                </tr>
+
+
+
+
+              </tbody>
+              <caption style="color:#212529;">• Note that this fee is not including any fee the journal may charge
+                during
+                publication and that will be discussed based on authorship order. <br>
+                • The listed fee is inclusive of Application Fee and will be deducted finally. <br>
+                • Feel free to mail us at <a href="mailto:info@pearresearch.com"
+                  style="color:#212529; text-decoration: underline!important;">info@pearresearch.com</a> for any other
+                study designs.
+              </caption>
+            </table>
+
+          </div>
+
+        </div>
+
+        <h6><i class="fa fa-check" aria-hidden="true"></i>
+          If you wish to apply for any study, the equivalent to the cost will be considered. For example, if you wish to
+          apply for a
+        </h6>
+        <br>
 
         <h6><i class="fa fa-check" aria-hidden="true"></i>
           The chronology of Application Fee receipt will be chosen for Application Chronology for the type of study you
@@ -423,7 +544,7 @@
           </tbody>
           <caption style="color:#212529;">• These figures are approximated for guidance assuming the number of authors
             are 7. The
-            final figures will be shared when discussed after joining or during publication, whichever comes first.
+            final figures will be discussed after joining or during publication, whichever comes first.
           </caption>
         </table>
 
@@ -444,7 +565,7 @@
         </h6>
         <br>
 
-        <h4 style="text-decoration: underline;">Group applications</h4>
+        <h4 style="text-decoration: underline;" id="group-req">Group applications</h4>
         <br>
         <h6><i class="fa fa-check" aria-hidden="true"></i> Minimum 3 candidates including the group representative will
           constitute a group. A group of 7 or more applicants may constitute a full team.
@@ -460,7 +581,8 @@
         </h6>
         <br>
 
-        <h6><i class="fa fa-check" aria-hidden="true"></i> For chronology of group applications: The group request will
+        <h6><i class="fa fa-check" aria-hidden="true"></i> For chronology of group applications: The group
+          request will
           be honored only if mentioned during
           the application. If you choose to apply with a group after having applied individually with no intention to
           continue your individual application, your payment will be transferred to that of the group application. In
@@ -472,9 +594,10 @@
           prior to application, since we need their consent to join us on their own volition. Alternatively, if you
           share their emails with us, we will email them for consent of joining. In this case, if everyone agree within
           24 hours of us having sent the emails, the time of the primary applicant will serve to be the basis of
-          chronology for the group. If you
+          chronology for the group.
+          If you
           have any doubts, reach us at <a class="link-req" href="mailto:info@pearresearch.com">info@pearresearch.com</a>
-          or at <a class="link-req" href="https://instagram.com/pearresearch"><i class="fa fa-instagram"
+          or at <a class="link-req" href="https://instagram.com/pearresearch"> <i class="fa fa-instagram"
               aria-hidden="true"></i>&nbsp;PearResearch</a>.
         </h6>
         <br>
@@ -823,8 +946,7 @@ vertical-align: middle;
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
