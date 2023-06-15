@@ -1775,7 +1775,9 @@
                     <br>
 
                     <div class="alert alert-info" role="alert">
-                      The July-August Premium teams' slots for Literature Review are almost full. Register now to book
+                      Only few slots are remaining for <u>July-August</u> Literature Review teams.
+                      Register now to
+                      book
                       your position.
                     </div>
 
@@ -1866,7 +1868,7 @@
                       <option value="Case Series">Case Series</option>
                       <option value="Correspondence">Correspondence</option>
                       <option value="Letter to Editor">Letter to Editor</option>
-                      <option value="Systematic Review" disabled>Systematic Review</option>
+                      <option value="Systematic Review" disabled>Systematic Review (Coming soon)</option>
                     </select>
                   </fieldset>
                 </div>
@@ -1972,6 +1974,10 @@
                       hiddenDivCR.style.display = "none";
                       hiddenDivCS.style.display = "none";
                     }
+
+                    // Hide hiddenDivGA when any option is selected in dropdown4 (at the end)
+                    hiddenDivGA.style.display = "none";
+
                   });
                 </script>
 
