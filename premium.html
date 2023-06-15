@@ -1758,6 +1758,10 @@
                   background-color: #66bfbf;
                   border-color: transparent;
                   font-weight: 520;
+                }
+
+                .payment-a:hover {
+                  text-decoration: underline !important;
 
                 }
               </style>
@@ -1771,9 +1775,8 @@
                     <br>
 
                     <div class="alert alert-info" role="alert">
-                      The May-June Premium teams' slots are full. We eagerly wait to help you in the
-                      upcoming
-                      team. Register now to book your position.
+                      The July-August Premium teams' slots for Literature Review are almost full. Register now to book
+                      your position.
                     </div>
 
 
@@ -1866,6 +1869,65 @@
                   </fieldset>
                 </div>
 
+                <!-- CR  -->
+                <div class="padding:0 12px 0;" id="hiddenDivCR" style="display: none; margin-top: -15px;">
+                  <div class="col-lg-12 alert alert-warning">
+                    Please check that you already have access to an interesting case and required consent to report that
+                    case. For further details, check the <a href="https://pearresearch.com/requirements-premium"
+                      class="payment-a alert-link">Requirements</a>.
+                  </div>
+                </div>
+
+                <!-- CS  -->
+                <div class="padding:0 12px 0;" id="hiddenDivCS" style="display: none; margin-top: -15px;">
+                  <div class="col-lg-12 alert alert-warning">
+                    Please check
+                    that you already
+                    have access to a series of
+                    interesting cases that
+                    you want to write about. For further details, check the <a
+                      href="https://pearresearch.com/requirements-premium"
+                      class="payment-a alert-link">Requirements</a>.
+                  </div>
+                </div>
+
+                <!-- OA  -->
+                <div class="padding:0 12px 0;" id="hiddenDivOS" style="display: none; margin-top: -15px;">
+                  <div class="col-lg-12 alert alert-warning">
+                    Please check
+                    that you have access to an institution with an active IRB and/or IEC. For further details, check the
+                    <a href="https://pearresearch.com/requirements-premium"
+                      class="payment-a alert-link">Requirements</a>.
+                  </div>
+                </div>
+
+
+                <script>
+                  var dropdown = document.getElementById("otherresearch");
+                  var div1 = document.getElementById("hiddenDivOS");
+                  var div2 = document.getElementById("hiddenDivCR");
+                  var div3 = document.getElementById("hiddenDivCS");
+
+                  dropdown.addEventListener("change", function () {
+                    hideAllDivs();
+
+                    var selectedOption = dropdown.value;
+                    if (selectedOption === "Original Study") {
+                      hiddenDivOS.style.display = "block";
+                    } else if (selectedOption === "Case Report") {
+                      hiddenDivCR.style.display = "block";
+                    } else if (selectedOption === "Case Series") {
+                      hiddenDivCS.style.display = "block";
+                    }
+                  });
+
+                  function hideAllDivs() {
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                  }
+                </script>
+
                 <div class="col-lg-12">
                   <fieldset>
 
@@ -1923,7 +1985,7 @@
 
                 <div class="control-group" id="control-grp-tnc">
                   <label class="control control-checkbox">
-                    I have paid the Application Fee of ₹500.
+                    I have paid the Application Fee of ₹500 or $10 (USD).
                     <input type="checkbox" required
                       oninvalid="this.setCustomValidity('You need to pay the Application Fee to proceed')"
                       oninput="this.setCustomValidity('')" />
