@@ -1843,6 +1843,7 @@
                     </select>
                   </fieldset>
                 </div>
+
                 <div class="col-lg-6" style="position:relative;">
                   <p class="required-form">*</p>
                   <fieldset>
@@ -1853,6 +1854,7 @@
                     </select>
                   </fieldset>
                 </div>
+
                 <div class="col-lg-6" style="position:relative;">
                   <p class="required-form">*</p>
                   <fieldset>
@@ -1869,64 +1871,110 @@
                   </fieldset>
                 </div>
 
-                <!-- CR  -->
-                <div class="padding:0 12px 0;" id="hiddenDivCR" style="display: none; margin-top: -15px;">
+                <div class="padding:0 12px 0;" id="hiddenDivGA"
+                  style="display: none; margin-top: -15px; margin-bottom: 15px;">
+                  <div class="col-lg-12 alert alert-warning">
+                    You may be ineligible to apply for an Original Study alone. To apply for an Original Study, you may
+                    need another member who has access to an institution with an active IEC/IRB.
+                  </div>
+                </div>
+
+                <div class="padding:0 12px 0;" id="hiddenDivOA" style="display: none; margin-top: -15px;">
                   <div class="col-lg-12 alert alert-warning">
                     Please check that you already have access to an interesting case and required consent to report that
                     case. For further details, check the <a href="https://pearresearch.com/requirements-premium"
-                      class="payment-a alert-link">Requirements</a>.
+                      class="payment-a alert-link" target=" _blank">Requirements</a>.
                   </div>
                 </div>
 
-                <!-- CS  -->
+                <div class="padding:0 12px 0;" id="hiddenDivCR" style="display: none; margin-top: -15px;">
+                  <div class="col-lg-12 alert alert-warning">
+                    Please check that you already have access to a series of interesting cases that you want to write
+                    about. For further details, check the <a href="https://pearresearch.com/requirements-premium"
+                      class="payment-a alert-link" target=" _blank">Requirements</a>.
+                  </div>
+                </div>
+
                 <div class="padding:0 12px 0;" id="hiddenDivCS" style="display: none; margin-top: -15px;">
                   <div class="col-lg-12 alert alert-warning">
-                    Please check
-                    that you already
-                    have access to a series of
-                    interesting cases that
-                    you want to write about. For further details, check the <a
-                      href="https://pearresearch.com/requirements-premium"
-                      class="payment-a alert-link">Requirements</a>.
+                    Please check that you have access to an institution with an active IRB and/or IEC. For further
+                    details, check the <a href="https://pearresearch.com/requirements-premium"
+                      class="payment-a alert-link" target=" _blank">Requirements</a>.
                   </div>
                 </div>
-
-                <!-- OA  -->
-                <div class="padding:0 12px 0;" id="hiddenDivOS" style="display: none; margin-top: -15px;">
-                  <div class="col-lg-12 alert alert-warning">
-                    Please check
-                    that you have access to an institution with an active IRB and/or IEC. For further details, check the
-                    <a href="https://pearresearch.com/requirements-premium"
-                      class="payment-a alert-link">Requirements</a>.
-                  </div>
-                </div>
-
 
                 <script>
-                  var dropdown = document.getElementById("otherresearch");
-                  var div1 = document.getElementById("hiddenDivOS");
-                  var div2 = document.getElementById("hiddenDivCR");
-                  var div3 = document.getElementById("hiddenDivCS");
+                  var dropdown1 = document.getElementById("groupapply");
+                  var dropdown4 = document.getElementById("otherresearch");
+                  var hiddenDivGA = document.getElementById("hiddenDivGA");
+                  var hiddenDivOA = document.getElementById("hiddenDivOA");
+                  var hiddenDivCR = document.getElementById("hiddenDivCR");
+                  var hiddenDivCS = document.getElementById("hiddenDivCS");
 
-                  dropdown.addEventListener("change", function () {
-                    hideAllDivs();
+                  var initialDisabledStatus = [];
+                  for (var i = 0; i < dropdown4.options.length; i++) {
+                    initialDisabledStatus.push(dropdown4.options[i].disabled);
+                  }
 
-                    var selectedOption = dropdown.value;
-                    if (selectedOption === "Original Study") {
-                      hiddenDivOS.style.display = "block";
-                    } else if (selectedOption === "Case Report") {
-                      hiddenDivCR.style.display = "block";
-                    } else if (selectedOption === "Case Series") {
-                      hiddenDivCS.style.display = "block";
+                  dropdown1.addEventListener("change", function () {
+                    var selectedOption1 = dropdown1.value;
+
+                    // Hide/show hiddenDivGA based on selectedOption1
+                    if (selectedOption1 === "No") {
+                      hiddenDivGA.style.display = "block";
+                    } else {
+                      hiddenDivGA.style.display = "none";
+                    }
+
+                    // Disable specific options in dropdown4 based on selectedOption1
+                    if (selectedOption1 === "No") {
+                      dropdown4.options[2].disabled = true; // Disable "Original Study" option
+                    } else {
+                      dropdown4.options[2].disabled = false; // Enable "Original Study" option
+                    }
+
+                    // Check if the preselected option in dropdown4 is disabled
+                    var preselectedOption4 = dropdown4.value;
+                    if (dropdown4.options[dropdown4.selectedIndex].disabled) {
+                      // Find the first enabled option and set it as the new selection
+                      for (var i = 0; i < dropdown4.options.length; i++) {
+                        if (!dropdown4.options[i].disabled) {
+                          dropdown4.value = dropdown4.options[1].value;
+                          break;
+                        }
+                      }
+                    }
+
+                    // Hide hiddenDivOA if "Original Study" is not selected
+                    if (dropdown4.value !== "Original Study") {
+                      hiddenDivOA.style.display = "none";
                     }
                   });
 
-                  function hideAllDivs() {
-                    div1.style.display = "none";
-                    div2.style.display = "none";
-                    div3.style.display = "none";
-                  }
+                  dropdown4.addEventListener("change", function () {
+                    var selectedOption4 = dropdown4.value;
+
+                    // Hide/show hiddenDivOA, hiddenDivCR, hiddenDivCS based on selectedOption4
+                    if (selectedOption4 === "Original Study") {
+                      hiddenDivOA.style.display = "block";
+                      hiddenDivCR.style.display = "none";
+                      hiddenDivCS.style.display = "none";
+                    } else if (selectedOption4 === "Case Report") {
+                      hiddenDivOA.style.display = "none";
+                      hiddenDivCR.style.display = "block";
+                      hiddenDivCS.style.display = "none";
+                    } else if (selectedOption4 === "Case Series") {
+                      hiddenDivOA.style.display = "none";
+                      hiddenDivCR.style.display = "none";
+                      hiddenDivCS.style.display = "block";
+                    } else {
+                      hiddenDivOA.style.display = "none";
+                      hiddenDivCR.style.display = "none";
+                      hiddenDivCS.style.display = "none";
+                    }
+                  });
                 </script>
+
 
                 <div class="col-lg-12">
                   <fieldset>
