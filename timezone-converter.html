@@ -33,6 +33,17 @@
 
 <body>
 
+  <style>
+    @media only screen and (max-width: 768px) {
+      .header-area .main-nav .logo {
+        float: none
+      }
+
+      .header-area .logo {
+        margin-left: 0;
+      }
+    }
+  </style>
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -73,9 +84,9 @@
               <!-- <li><a href="index.html">Testimonials</a></li>
                     <li><a href="index.html">Contact Us</a></li> -->
             </ul>
-            <a class='menu-trigger'>
+            <!-- <a class='menu-trigger'>
               <span>Menu</span>
-            </a>
+            </a> -->
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
@@ -142,7 +153,7 @@
           enableTime: true,
           dateFormat: 'd-m-Y H:i',
           defaultDate: new Date(),
-          time_24hr: true
+          time_24hr: false
         });
 
         $('#sourceTimezone, #destTimezone, #sourceDateTime').change(function () {
